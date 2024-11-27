@@ -109,6 +109,74 @@ h2 span
                   animation-delay: -0.8s; 
      }
 
+ /* Modal styling for the cookie consent pop-up */
+ #cookie-consent-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(54, 69, 79, 0.75); /* Charcoal gray with 75% opacity */
+	display: none; /* Hidden by default */
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+/* Container for the cookie consent content */
+#cookie-consent-popup .container {
+	background-color: rgb(143, 143, 143, 0.75);
+	padding: 25px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 600px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text styling */
+#cookie-consent-popup p {
+	margin: 0;
+	font-size: 16px;
+}
+
+/* Button styling */
+#accept-cookies {
+	background-color: #00BFFF; /* Baby blue */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 15px;
+}
+
+#decline-cookies {
+	background-color: white;
+	color: black;
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+/* Styling for the "Learn more" link */
+#cookie-consent-popup a {
+	color: #00BFFF; /* Baby blue */
+	text-decoration: none;
+}
+
+/* Add hover effect for buttons */
+#accept-cookies:hover,
+#decline-cookies:hover {
+	opacity: 0.8;
+}
+	 
 @-webkit-keyframes sk-waveStretchDelay {
   0%, 40%, 100% {
             -webkit-transform: scaleY(0.4);

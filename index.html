@@ -686,13 +686,14 @@
             data-wow-offset="50"
             data-wow-delay="0.9s"
           >
-            <form action="#" method="post">
+            <form action="includes/send_email.php" method="post">
               <label>NAME</label>
               <input
                 name="fullname"
                 type="text"
                 class="form-control"
                 id="fullname"
+                required
               />
 
               <label>EMAIL</label>
@@ -701,7 +702,17 @@
                 type="email"
                 class="form-control"
                 id="email"
+                required
               />
+
+              <label>SUBJECT</label>
+              <input 
+                name="subject"
+                type="text"
+                class="form-control"
+                id="subject" 
+                required
+                />
 
               <label>MESSAGE</label>
               <textarea
@@ -709,6 +720,7 @@
                 rows="4"
                 class="form-control"
                 id="message"
+                required
               ></textarea>
 
               <input type="submit" class="form-control" />

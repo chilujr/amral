@@ -10,8 +10,152 @@ body
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 		overflow-x: hidden; /* prevent horizontal scrollbar from appearing */
+		margin: 0;
+		padding: 0; /* Remove default margin/padding from body */
 	}
 	
+
+  
+  /* Ensure navbar sticks to the top */
+  nav.navbar {
+	position: fixed; /* Makes navbar stick to the top */
+	top: 0; /* Aligns it to the very top */
+	left: 0; /* Stretches to the left edge */
+	width: 100%; /* Spans the full width of the page */
+	z-index: 1000; /* Ensures it stays on top of other elements */
+  }
+  
+  /* Add some padding to compensate for the fixed navbar */
+  body {
+	padding-top: 60px; /* Adjust this value based on the navbar height */
+  }
+  
+/* Style for the "Get Started" button */
+.get-started-btn {
+	position: absolute; /* Position it relative to the nearest positioned ancestor */
+	top: 50%; /* Align vertically */
+	right: 30px; /* Distance from the right edge */
+	transform: translateY(-50%); /* Center it vertically */
+	padding: 10px 20px; /* Padding for the button */
+	font-size: 16px; /* Font size */
+	background-color: transparent; /* Transparent background */
+	border: 2px solid rgb(255, 255, 255); /* Black border */
+	color: black; /* Black text */
+	text-transform: uppercase; /* Make text uppercase */
+	text-decoration: none; /* Remove underline */
+	border-radius: 5px; /* Rounded corners */
+	transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect for the button */
+  .get-started-btn:hover {
+	background-color: rgb(255, 255, 255); /* Black background on hover */
+	color: white; /* White text on hover */
+  }
+  
+/* Style for the home title */
+.home-title {
+	text-align: left; /* Align text to the left */
+	font-size: 48px; /* Adjust size if necessary */
+	font-weight: bold; /* Make it bold */
+	margin-top: 0; /* Remove any default top margin */
+	margin-left: 30px; /* Add space from the left edge */
+	line-height: 1.2; /* Adjust line height for spacing */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+	.home-title {
+	  font-size: 36px; /* Smaller font size for smaller screens */
+	  margin-left: 15px; /* Adjust left margin */
+	}
+  }
+  
+/* Flip Cards */
+
+/* The flip card container - set the width and height to whatever you want. */
+.flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* 3D effect */
+	margin: 1rem auto;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front,
+  .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+  }
+  
+  /* Style the front side */
+  .flip-card-front {
+	background-color: #f8f9fa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 2px solid #fff;
+	border-radius: 10px;
+  }
+  
+  .flip-card-front img {
+	width: 50px;
+	height: auto;
+	margin-bottom: 15px;
+  }
+  
+  .flip-card-front h3 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 0;
+	color: #333;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+	background-color: #007bff;
+	color: white;
+	transform: rotateY(180deg);
+	padding: 15px;
+	border-radius: 10px;
+  }
+  
+  .flip-card-back p {
+	font-size: 1rem;
+	margin-top: 15px;
+	line-height: 1.5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+	.flip-card {
+	  width: 250px;
+	  height: 250px;
+	}
+  }
+  
+
 a {
 	color: #47C6F8;
 }
@@ -164,6 +308,36 @@ h2 span
 	margin-top: 15px;
 	margin-left: 10px;
 }
+
+/* Ensure Flexbox layout for navigation bar */
+nav.navbar .container {
+	display: flex;
+	align-items: center; /* Vertically center items */
+	justify-content: space-between; /* Push logo left and menu right */
+  }
+  
+  /* Styling for the navigation menu */
+  .navbar-collapse ul.nav {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .navbar-collapse ul.nav li {
+	margin-left: 15px; /* Add spacing between menu items */
+  }
+  
+  .navbar-collapse ul.nav li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #333; /* Adjust color as needed */
+  }
+  
+  .navbar-collapse ul.nav li a:hover {
+	color: #00BFFF; /* Add hover effect */
+  }
+  
 
 /* Styling for the "Learn more" link */
 #cookie-consent-popup a {

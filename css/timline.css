@@ -1,61 +1,98 @@
-body{margin-top:20px;}
-.timeline-steps {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap
+body {
+    margin-top: 20px;
 }
 
-.timeline-steps .timeline-step {
-    align-items: center;
+.timeline-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
-    margin: 1rem
+    width: 100%;
 }
 
-@media (min-width:768px) {
-    .timeline-steps .timeline-step:not(:last-child):after {
-        content: "";
-        display: block;
-        border-top: .25rem dotted #3b82f6;
-        width: 3.46rem;
-        position: absolute;
-        left: 7.5rem;
-        top: .3125rem
-    }
-    .timeline-steps .timeline-step:not(:first-child):before {
-        content: "";
-        display: block;
-        border-top: .25rem dotted #3b82f6;
-        width: 3.8125rem;
-        position: absolute;
-        right: 7.5rem;
-        top: .3125rem
-    }
+.timeline-modal {
+    position: relative;
+    flex: 1;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-steps .timeline-content {
-    width: 10rem;
-    text-align: center
+.timeline-modal:hover {
+    background-color: #e2e6ea;
 }
 
-.timeline-steps .timeline-content .inner-circle {
-    border-radius: 1.5rem;
-    height: 1rem;
-    width: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3b82f6
+.timeline-modal h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.timeline-steps .timeline-content .inner-circle:before {
-    content: "";
-    background-color: #3b82f6;
-    display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    min-width: 3rem;
-    border-radius: 6.25rem;
-    opacity: .5
+.timeline-modal .hover-text {
+    display: none;
+    font-size: 1rem;
+    color: #6c757d;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.timeline-modal:hover .hover-text {
+    display: block;
+}
+
+.timeline-arrow {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #3b82f6;
+    display: none;
+}
+
+.timeline-modal:not(:last-child):hover + .timeline-arrow {
+    display: block;
+}
+
+.timeline-modal + .timeline-arrow {
+    left: -15px;
+    right: auto;
+    border-top-color: #3b82f6;
+}
+
+/* Make the modals transparent with a white border */
+.modal-dialog {
+    max-width: 80%;
+    margin: auto;
+}
+
+.modal-content {
+    background-color: transparent; /* Set background to transparent */
+    border: 2px solid #fff; /* Add a white border */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for a more defined look */
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: none;
 }

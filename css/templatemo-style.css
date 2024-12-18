@@ -15,19 +15,14 @@ body
 	}
 	
 
-  
-  /* Ensure navbar sticks to the top */
-  nav.navbar {
-	position: fixed; /* Makes navbar stick to the top */
-	top: 0; /* Aligns it to the very top */
-	left: 0; /* Stretches to the left edge */
-	width: 100%; /* Spans the full width of the page */
-	z-index: 1000; /* Ensures it stays on top of other elements */
-  }
+	  .site-logo img {
+		height: 40px;
+	  }
+	 
   
   /* Add some padding to compensate for the fixed navbar */
   body {
-	padding-top: 60px; /* Adjust this value based on the navbar height */
+	padding-top: 0; /* Adjust this value based on the navbar height */
   }
   
 /* Style for the "Get Started" button */
@@ -71,82 +66,6 @@ body
 	}
   }
   
-/* Flip Cards */
-
-/* The flip card container - set the width and height to whatever you want. */
-.flip-card {
-	background-color: transparent;
-	width: 300px;
-	height: 300px;
-	border: 1px solid #f1f1f1;
-	perspective: 1000px; /* 3D effect */
-	margin: 1rem auto;
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front,
-  .flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-  }
-  
-  /* Style the front side */
-  .flip-card-front {
-	background-color: #f8f9fa;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	border: 2px solid #fff;
-	border-radius: 10px;
-  }
-  
-  .flip-card-front img {
-	width: 50px;
-	height: auto;
-	margin-bottom: 15px;
-  }
-  
-  .flip-card-front h3 {
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin: 0;
-	color: #333;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-	background-color: #007bff;
-	color: white;
-	transform: rotateY(180deg);
-	padding: 15px;
-	border-radius: 10px;
-  }
-  
-  .flip-card-back p {
-	font-size: 1rem;
-	margin-top: 15px;
-	line-height: 1.5;
-  }
-  
   /* Responsive Styles */
   @media (max-width: 768px) {
 	.flip-card {
@@ -187,6 +106,100 @@ h2 span
 	}
 /* end about team service portfolio contact */
 
+/* Timeline Hover */
+
+/* Initially hide the muted text */
+.hidden-text {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the text when hovering over the timeline-content */
+  .timeline-content:hover .hidden-text {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  /* Style for the modal box */
+.hover-modal {
+	position: absolute;
+	top: 120%; /* Adjust to position below the text */
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.85);
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 5px;
+	font-size: 14px;
+	line-height: 1.5;
+	white-space: nowrap;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	z-index: 10;
+  }
+  
+  /* Triangle (optional) */
+  .hover-modal::after {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent;
+  }
+  
+  /* Show the modal box on hover */
+  .timeline-content:hover .hover-modal {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+
+/* Fully Transparent Card Style */
+.card {
+	background: rgba(255, 255, 255, 0); /* Fully transparent */
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+	color: white; /* Make text white */
+  }
+  
+  /* Image Styling */
+  .card img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	height: 200px;
+	object-fit: cover;
+  }
+  
+  /* Glow Effect on Hover */
+  .card:hover {
+	transform: scale(1.05); /* Slightly enlarge */
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White glow */
+  }
+  
+  /* Title Styling */
+  .card-title {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+	color: white; /* White text */
+  }
+  
+  /* Text Styling */
+  .card-text {
+	font-size: 1rem;
+	color: white; /* White text */
+  }
+  
+  .navbar {
+	margin-bottom: 0;
+  }  
 
 
 /* start preloader */

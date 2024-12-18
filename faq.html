@@ -13,7 +13,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
 
     <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link
       href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
@@ -23,12 +23,6 @@
     <link rel="stylesheet" href="css/templatemo-style.css" />
     <link rel="stylesheet" href="css/collapsible.css" />
     <link rel="stylesheet" href="css/footer-style.css" />
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.singlePageNav.min.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom.js"></script>
   </head>
 
   <body id="top">
@@ -44,28 +38,39 @@
     </div>
     <!-- end preloader -->
 
-    <!-- start navigation -->
-    <nav class="navbar navbar-default templatemo-nav" role="navigation">
-      <div class="container d-flex">
-        <!-- Logo Section -->
-        <div class="navbar-header">
-          <h1 class="site-logo">
-            <a href="index.html" class="navbar-brand">
-              <img src="images/amral_logo.png" alt="Amral Logo" style="height: 40px" />
-            </a>
-          </h1>
-        </div>
-    
-        <!-- Navigation Menu -->
-        <div class="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="https://forms.gle/nzRytCYawkKvjMaw7">GET STARTED</a></li>
+     <!-- Navigation Menu -->
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="images/amral_logo_white.png" alt="Amral Logo" style="width: 100px; padding-left: 20px;padding-right: 20px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">How It Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#team">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#service">Services</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Get Started</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html#contact">Contact Us</a></li>
+                <li><a class="dropdown-item" href="https://forms.gle/nzRytCYawkKvjMaw7">Sign Up to Our Program</a></li>
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- end navigation -->
+<!-- End Navigation -->
+
+<br /><br /><br /><br /><br />
 
     <!-- start about -->
     <section id="">
@@ -163,42 +168,41 @@
     <br /><br /><br /><br /><br />
 
 
-   <!-- footer -->
+ <!-- footer -->
 
-   <footer class="footer-20192">
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <a href="index.html" class="navbar-brand"><img src="images/amral_logo_white.png" style="height: 65px" />
-            </a>
-          </div>
+ <footer class="footer-20192">
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="index.html" class="navbar-brand"><img src="images/amral_logo_white.png" style="height: 65px" />
+          </a>
+        </div>
 
-          <div class="col-sm-4">
-            <h3>Company</h3>
-            <ul class="list-unstyled links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">How It Works</a></li>
-              <li><a href="index.html">About Us</a></li>
-              <li><a href="index.html">Services</a></li>
-              <li><a href="index.html">Contact Us</a></li>
-            </ul>
-          </div>
+        <div class="col-sm-4">
+          <h3>Company</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">How It Works</a></li>
+            <li><a href="index.html#team">About Us</a></li>
+            <li><a href="index.html#service">Services</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
 
-          <div class="col-sm-4">
-            <h3>Further Information</h3>
-            <ul class="list-unstyled links">
-              <li><a href="terms.html">Terms &amp; Conditions</a></li>
-              <li><a href="policy.html">Privacy Policy</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
-          </div>
+        <div class="col-sm-4">
+          <h3>Further Information</h3>
+          <ul class="list-unstyled links">
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </footer>
-
-  <!-- End footer -->
+  </div>
+</footer>
+<!-- End footer -->
 
   <!-- start copyright -->
   <footer id="copyright">
@@ -215,6 +219,12 @@
   <!-- end copyright -->
 
       <script src="js/collapsible.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.singlePageNav.min.js"></script>
+      <script src="js/typed.js"></script>
+      <script src="js/wow.min.js"></script>
+      <script src="js/custom.js"></script>
 
   </body>
 </html>

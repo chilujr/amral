@@ -178,12 +178,23 @@ h2 span
 	object-fit: cover;
   }
   
-  /* Glow Effect on Hover */
-  .card:hover {
+/* Glow Effect on Hover */
+.card:hover {
 	transform: scale(1.05); /* Slightly enlarge */
-	box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White glow */
+	box-shadow: none; /* Removed glow effect */
+}
+
+#copyright {
+	font-size: 0.9rem;
   }
   
+  #copyright p a:hover {
+	color: #007bff;
+	text-decoration: underline;
+  }
+	
+
+
   /* Title Styling */
   .card-title {
 	font-size: 1.25rem;

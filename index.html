@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-
   <title>Amral Inc.</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
@@ -21,11 +20,10 @@
   <link rel="stylesheet" href="css/footer-style.css">
   <link rel="stylesheet" href="css/timline.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 
 <body id="top">
-  <!-- start preloader -->
+  <!-- Start Preloader -->
   <div class="preloader">
     <div class="sk-spinner sk-spinner-wave">
       <div class="sk-rect1"></div>
@@ -35,27 +33,34 @@
       <div class="sk-rect5"></div>
     </div>
   </div>
-  <!-- end preloader -->
+  <!-- End Preloader -->
 
-  <!-- Navigation Menu -->
+  <!-- Start Cookie Consent Pop-up -->
+  <div id="cookie-consent-popup">
+    <div class="container">
+      <p>This website uses cookies to ensure you get the best experience. <a href="/privacy-policy" target="_blank">Learn more</a></p>
+      <div>
+        <button id="accept-cookies">Accept</button>
+        <button id="decline-cookies">Decline</button>
+      </div>
+    </div>
+  </div>
+  <!-- End Cookie Consent Pop-up -->
+
+  <!-- Start Navigation Menu -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="images/amral_logo_white.png" alt="Amral Logo"
-          style="width: 100px; padding-left: 20px;padding-right: 20px;"></a>
+      <a class="navbar-brand" href="index.html">
+        <img src="images/amral_logo_white.png" alt="Amral Logo" style="width: 100px; padding: 0 20px;">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">How It Works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#team">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#service">Services</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Get Started</a>
             <ul class="dropdown-menu">
@@ -68,108 +73,69 @@
       </div>
     </div>
   </nav>
-  <!-- End Navigation -->
+  <!-- End Navigation Menu -->
 
-
-  <!-- Start Home -->
-<section id="home" style="padding: 4rem 1rem; text-align: center;">
-  <div class="container">
-    <div class="row">
-      <!-- Adjusted text alignment for mobile -->
-      <div class="col-12">
-        <h1 class="wow fadeIn home-title" 
-            data-wow-offset="50" 
-            data-wow-delay="0.9s" 
-            style="font-size: 3.5rem; line-height: 1.4; margin-bottom: 1.5rem;">
-          Your Path to <br /><span style="color: #28a7e9; font-weight: bold;">Homeownership</span>
-        </h1>
-        <!-- Sub-element adjusted for mobile visibility -->
-        <div class="element" style="margin-bottom: 2rem;">
-          <!-- Uncomment if needed -->
-          <!--<div class="sub-element" style="font-size: 1rem; color: #555;">
-            "Your Pathway from Renting to Owning"
-          </div>-->
-        </div>
-      </div>
-      <!-- Positioned button within a div for proper alignment -->
-      <div class="col-12">
-        <a data-scroll href="https://forms.gle/nzRytCYawkKvjMaw7" 
-           class="btn btn-default wow fadeInUp smoothscroll get-started-btn" 
-           data-wow-offset="50" 
-           data-wow-delay="0.6s" 
-           style="padding: 0.8rem 2rem; font-size: 1rem; border-radius: 5px;" 
-           aria-label="Get started form link">
-          GET STARTED
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Home -->
-
-
-  <br>
-
-  <!-- Rent to Own -->
-<section id="about" style="padding: 4rem 1rem;">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-12">
-        <h2 class="wow bounceIn" 
-            data-wow-offset="50" 
-            data-wow-delay="0.3s" 
-            style="font-size: 2rem; margin-bottom: 2rem;">
-          HOW DOES RENT-TO-OWN <span>WORK</span>
-        </h2>
-      </div>
-    </div>
-    <div class="row g-4">
-      <!-- Step 1 -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card h-100">
-          <img src="images/lease-renting-contract-residential-tenant-concept.jpg" 
-               class="card-img-top" 
-               alt="Lease Agreement" 
-               style="max-width: 100%; height: auto;">
-          <div class="card-body text-center">
-            <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold;">Step 1: Lease Agreement</h5>
-            <p class="card-text" style="font-size: 1rem;">Sign a rental agreement to live in the property.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card h-100">
-          <img src="images/close-up-people-making-home-comfortable.jpg" 
-               class="card-img-top" 
-               alt="Save for Down Payment" 
-               style="max-width: 100%; height: auto;">
-          <div class="card-body text-center">
-            <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold;">Step 2: Save for Down Payment</h5>
-            <p class="card-text" style="font-size: 1rem;">Start saving for your future down payment with monthly option consideration contributions.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card h-100">
-          <img src="images/happy-couple-receiving-keys-their-new-home-from-realtor.jpg" 
-               class="card-img-top" 
-               alt="Purchase the Property" 
-               style="max-width: 100%; height: auto;">
-          <div class="card-body text-center">
-            <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold;">Step 3: Purchase the Property</h5>
-            <p class="card-text" style="font-size: 1rem;">At the end of the rental period, exercise your right to purchase the property with your saved funds.</p>
+  <!-- Start Home Section -->
+  <section id="home" style="padding: 4rem 1rem; text-align: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="wow fadeIn home-title" data-wow-offset="50" data-wow-delay="0.9s" style="font-size: 3.5rem; line-height: 1.4; margin-bottom: 1.5rem;">
+            Your Path to <br /><span style="color: #28a7e9; font-weight: bold;">Homeownership</span>
+          </h1>
+          <div class="col-12">
+            <a data-scroll href="https://forms.gle/nzRytCYawkKvjMaw7" class="btn btn-default wow fadeInUp smoothscroll get-started-btn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 0.8rem 2rem; font-size: 1rem; border-radius: 5px;">
+              GET STARTED
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- End Home Section -->
 
-  <!--  -->
+  <!-- Start Rent-to-Own Section -->
+  <section id="about" style="padding: 4rem 1rem;">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s" style="font-size: 2rem; margin-bottom: 2rem;">
+            HOW DOES RENT-TO-OWN <span>WORK</span>
+          </h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100">
+            <img src="images/lease-renting-contract-residential-tenant-concept.jpg" class="card-img-top" alt="Lease Agreement">
+            <div class="card-body text-center">
+              <h5 class="card-title">Step 1: Lease Agreement</h5>
+              <p class="card-text">Sign a rental agreement to live in the property.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100">
+            <img src="images/close-up-people-making-home-comfortable.jpg" class="card-img-top" alt="Save for Down Payment">
+            <div class="card-body text-center">
+              <h5 class="card-title">Step 2: Save for Down Payment</h5>
+              <p class="card-text">Start saving for your future down payment with monthly option consideration contributions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100">
+            <img src="images/happy-couple-receiving-keys-their-new-home-from-realtor.jpg" class="card-img-top" alt="Purchase the Property">
+            <div class="card-body text-center">
+              <h5 class="card-title">Step 3: Purchase the Property</h5>
+              <p class="card-text">At the end of the rental period, exercise your right to purchase the property with your saved funds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Rent-to-Own Section -->
 
   <br /><br />
 
@@ -357,52 +323,66 @@
 
   <br />
 
-  <!-- Start Services -->
-<section id="service">
+ <!-- Start Services -->
+<section id="service" style="padding: 4rem 1rem;">
   <div class="container">
-    <div class="row text-center mb-4">
+    <div class="row text-center">
       <div class="col-12">
-        <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+        <h2 class="wow bounceIn" 
+            data-wow-offset="50" 
+            data-wow-delay="0.3s" 
+            style="font-size: 2rem; margin-bottom: 2rem;">
           WE OFFER THE <span>FOLLOWING SERVICES</span>
         </h2>
       </div>
     </div>
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-4 col-12 mb-4 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">
-        <div class="card custom-card">
-          <img src="images/multiracial-family-getting-home-consultation-choosig-colors-floor.jpg" class="card-img-top" alt="service image">
-          <div class="card-body">
-            <h4 class="card-title">1. Customized Rent-to-Own Plans</h4>
-            <p class="card-text">
-              We create tailored plans that fit your financial situation, allowing you to rent now and purchase later.
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/multiracial-family-getting-home-consultation-choosig-colors-floor.jpg" 
+               class="card-img-top" 
+               alt="Customized Rent-to-Own Plans" 
+               style="max-width: 100%; height: auto;">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold;">1. Customized Rent-to-Own Plans</h5>
+            <p class="card-text" style="font-size: 1rem;">
+              We create tailored plans that fit your financial situation, allowing you to rent now and purchase later. 
               We guarantee regular communication and support so you always know what's next.
             </p>
           </div>
         </div>
       </div>
-      <!-- Card 2 -->
-      <div class="col-md-4 col-12 mb-4 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">
-        <div class="card custom-card">
-          <img src="images/medium-shot-guest-host-shaking-hands.jpg" class="card-img-top" alt="service image">
-          <div class="card-body">
-            <h4 class="card-title">2. Credit Support & Financial Guidance</h4>
-            <p class="card-text">
-              We provide credit counseling and assistance to help improve your credit score, making it easier to
+
+      <!-- Service 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/medium-shot-guest-host-shaking-hands.jpg" 
+               class="card-img-top" 
+               alt="Credit Support & Financial Guidance" 
+               style="max-width: 100%; height: auto;">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold;">2. Credit Support & Financial Guidance</h5>
+            <p class="card-text" style="font-size: 1rem;">
+              We provide credit counseling and assistance to help improve your credit score, making it easier to 
               qualify for a mortgage and secure favorable terms later on.
             </p>
           </div>
         </div>
       </div>
-      <!-- Card 3 -->
-      <div class="col-md-4 col-12 mb-4 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">
-        <div class="card custom-card">
-          <img src="images/pexels-binyaminmellish-106399.jpg" class="card-img-top" alt="service image">
-          <div class="card-body">
-            <h4 class="card-title">3. A Variety of Homes to Choose From</h4>
-            <p class="card-text">
-              Explore a wide selection of homes within your budget and preferences, in your desired locations. Start
-              your journey today—contact us to learn more!
+
+      <!-- Service 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/pexels-binyaminmellish-106399.jpg" 
+               class="card-img-top" 
+               alt="A Variety of Homes to Choose From" 
+               style="max-width: 100%; height: auto;">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold;">3. A Variety of Homes to Choose From</h5>
+            <p class="card-text" style="font-size: 1rem;">
+              Explore a wide selection of homes within your budget and preferences, in your desired locations. 
+              Start your journey today—contact us to learn more!
             </p>
           </div>
         </div>
@@ -411,7 +391,6 @@
   </div>
 </section>
 <!-- End Services -->
-
 
   <!-- Start Contact Section -->
   <section id="contact">
@@ -468,71 +447,58 @@
   </section>
   <!-- End Contact -->
 
-  <!-- footer -->
-
-  <footer class="footer-20192">
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <a href="index.html" class="navbar-brand"><img src="images/amral_logo_white.png" alt="Amral Logo" style="height: 65px" />
-            </a>
-          </div>
-
-          <div class="col-sm-4">
-            <h3>Company</h3>
-            <ul class="list-unstyled links">
-              <li><a href="#top">Home</a></li>
-              <li><a href="#about">How It Works</a></li>
-              <li><a href="#team">About Us</a></li>
-              <li><a href="#service">Services</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <div class="col-sm-4">
-            <h3>Further Information</h3>
-            <ul class="list-unstyled links">
-              <li><a href="terms.html">Terms &amp; Conditions</a></li>
-              <li><a href="policy.html">Privacy Policy</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
+<!-- Footer -->
+<footer class="footer-20192 bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-lg-4 col-md-12 text-center text-lg-start mb-4">
+        <a href="index.html" class="navbar-brand d-inline-block">
+          <img src="images/amral_logo_white.png" alt="Amral Logo" style="height: 65px;" />
+        </a>
       </div>
-    </div>
-  </footer>
 
-  <!-- End footer -->
-
-  <!-- start copyright -->
-  <footer id="copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-            Amral Inc. &copy; Copyright 2024. Designed O31 MEDIA
-          </p>
-        </div>
+      <!-- Company Links -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <h3 class="text-uppercase">Company</h3>
+        <ul class="list-unstyled">
+          <li><a href="#top" class="text-decoration-none text-white">Home</a></li>
+          <li><a href="#about" class="text-decoration-none text-white">How It Works</a></li>
+          <li><a href="#team" class="text-decoration-none text-white">About Us</a></li>
+          <li><a href="#service" class="text-decoration-none text-white">Services</a></li>
+          <li><a href="#contact" class="text-decoration-none text-white">Contact Us</a></li>
+        </ul>
       </div>
-    </div>
-  </footer>
-  <!-- end copyright -->
 
-  <!-- Cookie Consent Pop-up -->
-
-  <!-- Cookie Consent Pop-up -->
-  <!-- Cookie Consent Pop-up (Modal) -->
-  <div id="cookie-consent-popup">
-    <div class="container">
-      <p>This website uses cookies to ensure you get the best experience. <a href="/privacy-policy"
-          target="_blank">Learn more</a></p>
-      <div>
-        <button id="accept-cookies">Accept</button>
-        <button id="decline-cookies">Decline</button>
+      <!-- Further Information -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h3 class="text-uppercase">Further Information</h3>
+        <ul class="list-unstyled">
+          <li><a href="terms.html" class="text-decoration-none text-white">Terms &amp; Conditions</a></li>
+          <li><a href="policy.html" class="text-decoration-none text-white">Privacy Policy</a></li>
+          <li><a href="faq.html" class="text-decoration-none text-white">FAQ</a></li>
+        </ul>
       </div>
     </div>
   </div>
+</footer>
+<!-- End Footer -->
+
+
+<!-- Start Copyright -->
+<footer id="copyright" class="bg-dark text-white py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0">
+          &copy; 2024 Amral Inc. Designed by <a href="#" class="text-decoration-none text-primary">O31 MEDIA</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End Copyright -->
+
 
   <!-- Link to your external JavaScript file -->
   <script src="cookie-consent.js"></script>

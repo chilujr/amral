@@ -43,18 +43,6 @@
   text-align: left;
 }
 
-/* Connecting Dots */
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #28a7e9;
-  border-radius: 50%;
-  top: 15px;
-  z-index: 2;
-  transform: translateX(-50%);
-}
 
 .timeline-item.left::before {
   right: -10px;

@@ -1,0 +1,113 @@
+/* General Styles */
+#timeline {
+  position: relative;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 0;
+}
+
+/* Horizontal Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #28a7e9;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Connecting Dots */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #28a7e9;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+/* Content Box */
+.timeline-item .content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+.timeline-item h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline {
+      padding: 20px 0;
+  }
+
+  .timeline::before {
+      width: 4px;
+      left: 20px;
+  }
+
+  .timeline-item {
+      width: 100%;
+      padding-left: 40px;
+  }
+
+  .timeline-item.left {
+      left: 0;
+  }
+
+  .timeline-item.right {
+      left: 0;
+  }
+
+  .timeline-item::before {
+      left: 15px;
+  }
+
+  .content {
+      text-align: left;
+  }
+}

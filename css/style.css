@@ -23,6 +23,12 @@ h6,
     font-weight: 500 !important;
 }
 
+.navbar .btn {
+    margin: 0; /* Removes extra margin */
+    vertical-align: middle; /* Aligns the button with text links */
+    line-height: 1.5; /* Ensures text alignment inside the button */
+}
+
     /* Roadmap Container */
     .roadmap-container {
         display: flex;

@@ -105,32 +105,37 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .timeline {
-      padding: 20px 0;
+    padding: 20px 0;
   }
 
   .timeline::before {
-      width: 4px;
-      left: 20px;
+    width: 4px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .timeline-item {
-      width: 100%;
-      padding-left: 40px;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .timeline-item.left {
-      left: 0;
+    left: 0;
+    text-align: left; /* Align left content to the left */
   }
 
   .timeline-item.right {
-      left: 0;
+    left: 0;
+    text-align: left; /* Align right content to the left */
   }
 
-  .timeline-item::before {
-      left: 15px;
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    display: none; /* Hide the dots on mobile */
   }
 
   .content {
-      text-align: left;
+    text-align: left;
   }
 }

@@ -23,6 +23,10 @@ h6,
     font-weight: 500 !important;
 }
 
+#works, #services, #roadmap, #faq, #contact, #benefits, #about {
+    scroll-margin-top: 80px; /* Adjust based on the navbar height */
+}
+
 .navbar .btn {
     margin: 0; /* Removes extra margin */
     vertical-align: middle; /* Aligns the button with text links */

@@ -337,7 +337,7 @@
     </div>
     <!-- About End -->
 
- <!-- Contact Start -->
+<!-- Contact Start -->
 <div class="container-fluid py-5" id="contact">
     <div class="container text-center">
         <div class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -352,21 +352,21 @@
                 <span>Know someone interested in rent-to-own? Refer them to us! When they start the program, you’ll receive a reward as a thank you. Reach out today!</span>
             </address>
             <br>
-            <form class="mx-auto" style="max-width: 600px;">
+            <form class="mx-auto" style="max-width: 600px;" action="includes/send_email.php" method="POST">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    <input type="text" class="form-control" id="name" name="fullname" placeholder="Your Name" required>
                     <label for="name">Your Name</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                     <label for="email">Your Email</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                     <label for="subject">Subject</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
                     <label for="message">Message</label>
                 </div>
                 <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
@@ -375,6 +375,7 @@
     </div>
 </div>
 <!-- Contact End -->
+
     
 
 <!-- Footer Start -->

@@ -17,7 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format";
+        echo "<script>
+            alert('Invalid email format. Please enter a valid email.');
+            window.location.href = '../index.html#contact';
+        </script>";
         exit;
     }
 
@@ -28,28 +31,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'chilujr99@gmail.com';
-        $mail->Password = 'oiyh ujub aeom mrcd';
+        $mail->Username = 'amraln.co@gmail.com'; // Your Gmail address
+        $mail->Password = 'zzan zuxw rxyi xyvr'; // Your App Password (Replace with a secure method)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
+        // Sender and recipient
         $mail->setFrom($email, $name);
-        $mail->addAddress('chilujr99@gmail.com');
+        $mail->addAddress('amraln.co@gmail.com'); // Receiving email
         $mail->addReplyTo($email, $name);
 
-        $mail->isHTML(false);
-        $mail->Subject = "$subject";
-        $mail->Body = "You have received a new message:\n\nName: $name\nEmail: $email\nSubject: $subject\n\nMessage:\n$message";
+        // Email content
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body = "
+            <h3>New Contact Form Message</h3>
+            <p><strong>Name:</strong> $name</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Subject:</strong> $subject</p>
+            <p><strong>Message:</strong></p>
+            <p>$message</p>
+        ";
 
+        // Send email
         $mail->send();
 
-        // JavaScript to show pop-up and redirect back to the contact section
+        // Success response
         echo "<script>
             alert('Thank you for your message! We will get back to you shortly.');
             window.location.href = '../index.html#contact';
         </script>";
     } catch (Exception $e) {
-        // In case of error
+        // Error response
         echo "<script>
             alert('Message could not be sent. Please try again later.');
             window.location.href = '../index.html#contact';
